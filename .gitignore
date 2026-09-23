@@ -1,0 +1,30 @@
+# Dependências
+node_modules/
+**/node_modules/
+
+# Variáveis de ambiente
+.env
+**/.env
+
+# Relatórios e evidências geradas
+**/reports/
+**/test-results/
+**/playwright-report/
+**/mochawesome-report/
+**/allure-results/
+**/coverage/
+**/screenshots/
+**/videos/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Sistema operacional / editores
+.DS_Store
+.vscode/
+*.iml
+.idea/
+
+# K6
+**/k6-results/

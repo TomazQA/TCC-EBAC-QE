@@ -1,0 +1,20 @@
+[
+  {
+    "nomeProduto": "Aero Daily Fitness Tee",
+    "tamanho": "XS",
+    "cor": "Black",
+    "quantidade": 3
+  },
+  {
+    "nomeProduto": "Atlas Fitness Tank",
+    "tamanho": "S",
+    "cor": "Blue",
+    "quantidade": 2
+  },
+  {
+    "nomeProduto": "Argus All-Weather Tank",
+    "tamanho": "M",
+    "cor": "Grady",
+    "quantidade": 10
+  }
+]

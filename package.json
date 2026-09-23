@@ -1,0 +1,13 @@
+{
+  "name": "tcc-ebac-qe",
+  "version": "1.0.0",
+  "description": "TCC - Engenheiro de Qualidade de Software (EBAC) - Estratégia de testes e automação para a EBAC Shop",
+  "private": true,
+  "scripts": {
+    "test:api": "npm --prefix API test",
+    "test:ui": "npm --prefix UI run cy:run",
+    "test:ui:open": "npm --prefix UI run cy:open"
+  },
+  "author": "",
+  "license": "ISC"
+}

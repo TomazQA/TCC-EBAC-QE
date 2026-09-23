@@ -1,0 +1,18 @@
+{
+  "name": "tcc-ebac-qe-ui",
+  "version": "1.0.0",
+  "description": "Testes de interface web (Cypress) para a EBAC Shop",
+  "private": true,
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --reporter mochawesome --reporter-options reportDir=reports,overwrite=false,html=true,json=true",
+    "report:merge": "mochawesome-merge reports/*.json > reports/report.json",
+    "report:generate": "marge reports/report.json --reportDir reports"
+  },
+  "devDependencies": {
+    "cypress": "^13.15.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
+  }
+}
