@@ -1,33 +1,36 @@
-# Mobile — Testes automatizados (a implementar)
+# Mobile - Testes automatizados (Android)
 
-Testes mobile cobrindo apenas a funcionalidade de **Catálogo de Produtos** (US-0004), usando **WebdriverIO + Appium**.
-
-## Escopo
-
-Conforme o enunciado do TCC, a automação mobile considera apenas os apps disponíveis em:
-- Android: https://github.com/EBAC-QE/testes-mobile-ebac-shop/tree/main/app/android
-- iOS: https://github.com/EBAC-QE/testes-mobile-ebac-shop/tree/ios-tests/app/ios
-
-Este projeto implementará os testes para **Android**.
-
-## Pré-requisitos (a configurar antes da implementação)
-
-- Android Studio + SDK instalado
-- Emulador Android configurado (ou dispositivo físico com depuração USB habilitada)
-- Appium Server instalado (`npm install -g appium`)
-- Driver UiAutomator2 do Appium (`appium driver install uiautomator2`)
-- Java JDK instalado (requisito do Android SDK)
-
-## Estrutura planejada
-
-```
-Mobile/
-├── tests/       # Specs de teste
-├── pages/       # Page Objects (Testing Pattern)
-├── wdio.conf.js # Configuração do WebdriverIO (a criar)
-└── package.json # A criar
-```
+Testes mobile cobrindo a funcionalidade de Catalogo de Produtos (US-0004), usando WebdriverIO + Appium (UiAutomator2).
 
 ## Status
 
-Estrutura de pastas criada. Implementação dos testes e configuração do ambiente Appium serão feitas na etapa de automação mobile (item 4.5.3 do trabalho).
+Nao concluido. Ver docs/limitacoes-mobile.md para o relato completo da investigacao e das evidencias coletadas.
+
+O ambiente de automacao (Android SDK, emulador, app instalado, estrutura WebdriverIO) foi configurado com sucesso, mas a funcionalidade de busca de produtos no app nao retornou resultados durante os testes manuais exploratorios, o que impediu a escrita de testes automatizados confiaveis dentro do prazo desta etapa.
+
+## Ambiente configurado
+
+- Emulador Android: ebac_rooted (Android 13, API 33), via Android Studio AVD Manager
+- App instalado: pacote br.com.lojaebac, activity .MainActivity
+- Framework: WebdriverIO + appium-uiautomator2-driver
+
+## Estrutura
+
+Mobile/
+- package.json
+- config/wdio.conf.js
+- test/specs/ (ainda vazio - ver limitacoes)
+- test/pageobjects/ (ainda vazio - ver limitacoes)
+
+## Como retomar
+
+1. Instalar dependencias: npm install
+2. Subir o emulador: ~/Android/Sdk/emulator/emulator -avd ebac_rooted
+3. Instalar e configurar o Appium Server com Appium Inspector para inspecao interativa de elementos (recomendado fortemente, em vez de adb shell uiautomator dump manual)
+4. Investigar a causa raiz da busca de produtos nao retornar resultados (ver hipoteses em docs/limitacoes-mobile.md)
+5. Escrever os Page Objects e specs de teste com os seletores ja parcialmente identificados:
+   - Campo de busca: resource-id="searchInput"
+   - Botao de busca/limpar: icone ao lado do campo (iconIcon)
+   - Filtros: resource-id="SortBy", resource-id="Category"
+   - Navegacao: resource-id="tab-home", tab-Search, tab-order, tab-profile
+   - Login: resource-id="email", password, btnLogin
