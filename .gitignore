@@ -5,6 +5,7 @@ node_modules/
 # Variáveis de ambiente
 .env
 **/.env
+UI/cypress.env.json
 
 # Relatórios e evidências geradas
 **/reports/
@@ -28,3 +29,4 @@ npm-debug.log*
 
 # K6
 **/k6-results/
+K6/data/usuarios.json

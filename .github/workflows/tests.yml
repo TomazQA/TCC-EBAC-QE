@@ -48,6 +48,18 @@ jobs:
         working-directory: ./UI
         run: npm install
 
+      - name: Gerar cypress.env.json a partir dos secrets
+        working-directory: ./UI
+        run: |
+          cat > cypress.env.json << EOF
+          {
+            "ADMIN_EMAIL": "${{ secrets.UI_ADMIN_EMAIL }}",
+            "ADMIN_PASSWORD": "${{ secrets.UI_ADMIN_PASSWORD }}",
+            "INVALID_PASSWORD": "${{ secrets.UI_INVALID_PASSWORD }}",
+            "DUPLICATE_EMAIL": "${{ secrets.UI_DUPLICATE_EMAIL }}"
+          }
+          EOF
+
       - name: Rodar testes de UI
         working-directory: ./UI
         run: npm run cy:run

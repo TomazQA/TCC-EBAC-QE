@@ -10,6 +10,9 @@ export const config = {
       platformName: 'Android',
       'appium:deviceName': 'emulator-5554',
       'appium:automationName': 'UiAutomator2',
+      // O app já está instalado no emulador (br.com.lojaebac).
+      // Usamos appPackage/appActivity em vez de "app" para não precisar
+      // versionar o APK (arquivo binário grande) no repositório Git.
       'appium:appPackage': 'br.com.lojaebac',
       'appium:appActivity': '.MainActivity',
       'appium:noReset': true,

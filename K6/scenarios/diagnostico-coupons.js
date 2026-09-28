@@ -3,9 +3,17 @@ import { check } from 'k6';
 import encoding from 'k6/encoding';
 
 const BASE_URL = __ENV.BASE_URL || 'http://lojaebac.ebaconline.art.br';
-const API_USER = __ENV.API_USER || 'admin_ebac';
-const API_PASSWORD = __ENV.API_PASSWORD || '@admin!&b@c!2022';
+const API_USER = __ENV.API_USER;
+const API_PASSWORD = __ENV.API_PASSWORD;
 
+if (!API_USER || !API_PASSWORD) {
+  throw new Error(
+    'Credenciais não informadas. Rode com: k6 run -e API_USER=... -e API_PASSWORD=... scenarios/diagnostico-coupons.js'
+  );
+}
+
+// Diagnóstico rápido: 5 VUs por 15s, apenas para inspecionar
+// o status e o corpo das respostas que falharam no teste de carga completo.
 export const options = {
   vus: 5,
   duration: '15s',

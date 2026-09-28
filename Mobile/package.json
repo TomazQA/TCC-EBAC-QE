@@ -2,7 +2,7 @@
   "name": "tcc-ebac-qe-mobile",
   "version": "1.0.0",
   "type": "module",
-  "description": "Testes mobile (Android) do Catalogo de Produtos - US-0004",
+  "description": "Testes mobile (Android) do Catálogo de Produtos - US-0004",
   "private": true,
   "scripts": {
     "test": "wdio run ./config/wdio.conf.js"

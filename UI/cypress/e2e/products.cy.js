@@ -5,9 +5,9 @@ describe('US-0004 - Catálogo de Produtos', () => {
     ProductsPage.visitarUrl();
   });
 
-  // CT001 - Caminho feliz: buscar produto existente
+  // CT002 - Caminho feliz: buscar produto existente
   // Baseado e validado em execução real (teste-ebac-ui/produtos.cy.js)
-  it('CT001 - deve buscar um produto com sucesso', () => {
+  it('CT002 - deve buscar um produto com sucesso', () => {
     const produto = 'Zeppelin Yoga Pant';
 
     ProductsPage.buscarProduto(produto);

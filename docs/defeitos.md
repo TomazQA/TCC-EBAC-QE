@@ -30,4 +30,6 @@ O sistema aceitou a adição normalmente, exibindo a mensagem de sucesso "11 × 
 **Evidência:**
 Teste automatizado `UI/cypress/e2e/cart.cy.js` (CT003), mantido intencionalmente com falha para documentar o defeito.
 
+![Carrinho aceitando 11 itens do mesmo produto](evidencias/def-001-carrinho-11-itens.png)
+
 **Status:** Aberto
