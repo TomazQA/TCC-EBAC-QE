@@ -15,7 +15,6 @@ Durante a tentativa de automatizar o Catálogo de Produtos no aplicativo Android
 
 A funcionalidade de busca de produtos (tela "Browse") não retorna resultados para nenhum termo testado (`"Aero"`, `"s"`, `"a"`), sempre exibindo a mensagem `"No products found"`, mesmo para termos que retornam centenas de resultados na versão web da mesma loja.
 
-![Busca de produtos sem resultado no app mobile](evidencias/mobile-busca-sem-resultado.png)
 
 ## Passos de investigação realizados
 

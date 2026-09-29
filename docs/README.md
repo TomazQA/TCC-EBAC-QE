@@ -18,8 +18,6 @@ Adicione aqui as capturas de tela mencionadas nos documentos desta pasta, seguin
 | `def-001-carrinho-11-itens.png` | Print do carrinho aceitando 11 unidades do mesmo produto | `defeitos.md` |
 | `k6-resultado-login.png` | Saída do terminal com o resultado da execução `k6 run scenarios/login.js` | `performance.md` |
 | `k6-resultado-cupons.png` | Saída do terminal com o resultado da execução `k6 run scenarios/coupons.js` | `performance.md` |
-| `mobile-busca-sem-resultado.png` | Print do app Android mostrando "No products found" | `limitacoes-mobile.md` |
-| `mobile-tela-login.png` | Print da tela de login do app, usada na investigação | `limitacoes-mobile.md` |
 
 Os prints usados durante o desenvolvimento deste trabalho já existem localmente (capturados ao longo da sessão de testes) — basta movê-los para esta pasta com os nomes acima e referenciá-los nos arquivos `.md` correspondentes, por exemplo:
 
